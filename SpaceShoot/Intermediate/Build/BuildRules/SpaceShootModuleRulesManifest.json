@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"C:\\Users\\laula\\Documents\\GitHub\\SpaceShooter_TP1\\SpaceShoot\\Source\\SpaceShoot\\SpaceShoot.Build.cs",
+		"C:\\Users\\laula\\Documents\\GitHub\\SpaceShooter_TP1\\SpaceShoot\\Source\\SpaceShoot.Target.cs",
+		"C:\\Users\\laula\\Documents\\GitHub\\SpaceShooter_TP1\\SpaceShoot\\Source\\SpaceShootEditor.Target.cs"
+	],
+	"EngineVersion": "5.5.4"
+}
