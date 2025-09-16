@@ -4,9 +4,14 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Pawn.h"
+#include "InputActionValue.h"
+#include "Components/BoxComponent.h"
 #include "SpaceShip.generated.h"
 
-UCLASS()
+class UInputMappingContext;
+class UInputAction;
+
+UCLASS(Blueprintable)
 class SPACESHOOT_API ASpaceShip : public APawn
 {
 	GENERATED_BODY()
@@ -14,6 +19,27 @@ class SPACESHOOT_API ASpaceShip : public APawn
 public:
 	// Sets default values for this pawn's properties
 	ASpaceShip();
+
+	UPROPERTY(EditDefaultsOnly, Category = "Input")
+	UInputMappingContext* InputMappingContext;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Input")
+	UInputAction* MoveAction;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Input")
+	UInputAction* LookAction;
+	
+	UPROPERTY(VisibleAnywhere)
+	UBoxComponent* BoxCollision;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, meta = (AllowPrivateAccess="true"))
+	UStaticMeshComponent* StaticMesh;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category=Pawn)
+	UPawnMovementComponent* MovementComponent;
+	
+	void Move(const FInputActionValue& Value);
+	void Look(const FInputActionValue& Value);
 
 protected:
 	// Called when the game starts or when spawned

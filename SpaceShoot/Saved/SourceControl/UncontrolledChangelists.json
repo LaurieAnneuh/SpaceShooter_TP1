@@ -6,7 +6,9 @@
 			"description": "Default Uncontrolled Changelist",
 			"files": [
 				"C:/Users/laula/Documents/GitHub/SpaceShooter_TP1/SpaceShoot/Content/StarterContent/Architecture/Floor_400x400.uasset",
-				"C:/Users/laula/Documents/GitHub/SpaceShooter_TP1/SpaceShoot/Content/Maps/MainMap.umap"
+				"C:/Users/laula/Documents/GitHub/SpaceShooter_TP1/SpaceShoot/Content/Maps/MainMap.umap",
+				"C:/Users/laula/Documents/GitHub/SpaceShooter_TP1/SpaceShoot/Content/Blueprint/BP_SpaceShip.uasset",
+				"C:/Users/laula/Documents/GitHub/SpaceShooter_TP1/SpaceShoot/Content/ThirdPerson/Input/IMC_Default.uasset"
 			]
 		}
 	]

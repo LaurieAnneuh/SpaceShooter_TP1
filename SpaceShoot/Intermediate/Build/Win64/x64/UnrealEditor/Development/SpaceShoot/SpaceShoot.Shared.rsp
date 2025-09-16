@@ -1,4 +1,5 @@
 /I "."
+/I "C:\Users\laula\Documents\GitHub\SpaceShooter_TP1\SpaceShoot\Source\SpaceShoot\Private"
 /I "..\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\UHT"
 /I "Runtime\Engine\Classes"
 /I "Runtime\Engine\Public"
@@ -287,6 +288,7 @@
 /I "Editor\AnimationEditMode\Public"
 /I "C:\Users\laula\Documents\GitHub\SpaceShooter_TP1\SpaceShoot\Intermediate\Build\Win64\UnrealEditor\Inc\SpaceShoot\UHT"
 /I "C:\Users\laula\Documents\GitHub\SpaceShooter_TP1\SpaceShoot\Source"
+/I "C:\Users\laula\Documents\GitHub\SpaceShooter_TP1\SpaceShoot\Source\SpaceShoot\Public"
 /I "..\Plugins\EnhancedInput\Intermediate\Build\Win64\UnrealEditor\Inc\EnhancedInput\UHT"
 /I "..\Plugins\EnhancedInput\Source"
 /I "..\Plugins\EnhancedInput\Source\EnhancedInput\Public"

@@ -14,7 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define SPACESHOOT_SpaceShip_generated_h
 
-#define FID_Users_laula_Documents_GitHub_SpaceShooter_TP1_SpaceShoot_Source_SpaceShoot_SpaceShip_h_12_INCLASS_NO_PURE_DECLS \
+#define FID_Users_laula_Documents_GitHub_SpaceShooter_TP1_SpaceShoot_Source_SpaceShoot_Public_SpaceShip_h_17_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesASpaceShip(); \
 	friend struct Z_Construct_UClass_ASpaceShip_Statics; \
@@ -23,7 +23,7 @@ public: \
 	DECLARE_SERIALIZER(ASpaceShip)
 
 
-#define FID_Users_laula_Documents_GitHub_SpaceShooter_TP1_SpaceShoot_Source_SpaceShoot_SpaceShip_h_12_ENHANCED_CONSTRUCTORS \
+#define FID_Users_laula_Documents_GitHub_SpaceShooter_TP1_SpaceShoot_Source_SpaceShoot_Public_SpaceShip_h_17_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	ASpaceShip(ASpaceShip&&); \
@@ -35,12 +35,12 @@ public: \
 	NO_API virtual ~ASpaceShip();
 
 
-#define FID_Users_laula_Documents_GitHub_SpaceShooter_TP1_SpaceShoot_Source_SpaceShoot_SpaceShip_h_9_PROLOG
-#define FID_Users_laula_Documents_GitHub_SpaceShooter_TP1_SpaceShoot_Source_SpaceShoot_SpaceShip_h_12_GENERATED_BODY \
+#define FID_Users_laula_Documents_GitHub_SpaceShooter_TP1_SpaceShoot_Source_SpaceShoot_Public_SpaceShip_h_14_PROLOG
+#define FID_Users_laula_Documents_GitHub_SpaceShooter_TP1_SpaceShoot_Source_SpaceShoot_Public_SpaceShip_h_17_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Users_laula_Documents_GitHub_SpaceShooter_TP1_SpaceShoot_Source_SpaceShoot_SpaceShip_h_12_INCLASS_NO_PURE_DECLS \
-	FID_Users_laula_Documents_GitHub_SpaceShooter_TP1_SpaceShoot_Source_SpaceShoot_SpaceShip_h_12_ENHANCED_CONSTRUCTORS \
+	FID_Users_laula_Documents_GitHub_SpaceShooter_TP1_SpaceShoot_Source_SpaceShoot_Public_SpaceShip_h_17_INCLASS_NO_PURE_DECLS \
+	FID_Users_laula_Documents_GitHub_SpaceShooter_TP1_SpaceShoot_Source_SpaceShoot_Public_SpaceShip_h_17_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -48,7 +48,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> SPACESHOOT_API UClass* StaticClass<class ASpaceShip>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Users_laula_Documents_GitHub_SpaceShooter_TP1_SpaceShoot_Source_SpaceShoot_SpaceShip_h
+#define CURRENT_FILE_ID FID_Users_laula_Documents_GitHub_SpaceShooter_TP1_SpaceShoot_Source_SpaceShoot_Public_SpaceShip_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
