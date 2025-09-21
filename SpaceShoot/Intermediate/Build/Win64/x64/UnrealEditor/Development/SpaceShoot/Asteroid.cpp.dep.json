@@ -1,0 +1,32 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\laula\\documents\\github\\spaceshooter_tp1\\spaceshoot\\source\\spaceshoot\\private\\object\\asteroid.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\laula\\documents\\github\\spaceshooter_tp1\\spaceshoot\\intermediate\\build\\win64\\x64\\spaceshooteditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "c:\\users\\laula\\documents\\github\\spaceshooter_tp1\\spaceshoot\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\spaceshoot\\definitions.spaceshoot.h",
+            "c:\\users\\laula\\documents\\github\\spaceshooter_tp1\\spaceshoot\\source\\spaceshoot\\public\\object\\asteroid.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\components\\boxcomponent.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\components\\shapecomponent.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\shapecomponent.generated.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\boxcomponent.generated.h",
+            "c:\\users\\laula\\documents\\github\\spaceshooter_tp1\\spaceshoot\\intermediate\\build\\win64\\unrealeditor\\inc\\spaceshoot\\uht\\asteroid.generated.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\kismet\\gameplaystatics.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\kismet\\kismetsystemlibrary.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\coreuobject\\public\\uobject\\propertyaccessutil.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\kismetsystemlibrary.generated.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\sound\\dialoguetypes.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\dialoguetypes.generated.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\kismet\\gameplaystaticstypes.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\gameplaystaticstypes.generated.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\gameplaystatics.generated.h",
+            "c:\\users\\laula\\documents\\github\\spaceshooter_tp1\\spaceshoot\\source\\spaceshoot\\public\\managers\\asteroidmanager.h",
+            "c:\\users\\laula\\documents\\github\\spaceshooter_tp1\\spaceshoot\\intermediate\\build\\win64\\unrealeditor\\inc\\spaceshoot\\uht\\asteroidmanager.generated.h",
+            "c:\\users\\laula\\documents\\github\\spaceshooter_tp1\\spaceshoot\\source\\spaceshoot\\public\\object\\laser.h",
+            "c:\\users\\laula\\documents\\github\\spaceshooter_tp1\\spaceshoot\\intermediate\\build\\win64\\unrealeditor\\inc\\spaceshoot\\uht\\laser.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

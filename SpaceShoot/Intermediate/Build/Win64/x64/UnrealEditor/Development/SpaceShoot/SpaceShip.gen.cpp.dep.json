@@ -6,7 +6,7 @@
         "PCH": "c:\\users\\laula\\documents\\github\\spaceshooter_tp1\\spaceshoot\\intermediate\\build\\win64\\x64\\spaceshooteditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
         "Includes": [
             "c:\\users\\laula\\documents\\github\\spaceshooter_tp1\\spaceshoot\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\spaceshoot\\definitions.spaceshoot.h",
-            "c:\\users\\laula\\documents\\github\\spaceshooter_tp1\\spaceshoot\\source\\spaceshoot\\public\\spaceship.h",
+            "c:\\users\\laula\\documents\\github\\spaceshooter_tp1\\spaceshoot\\source\\spaceshoot\\public\\object\\spaceship.h",
             "c:\\program files\\epic games\\ue_5.5\\engine\\plugins\\enhancedinput\\source\\enhancedinput\\public\\inputactionvalue.h",
             "c:\\program files\\epic games\\ue_5.5\\engine\\plugins\\enhancedinput\\intermediate\\build\\win64\\unrealeditor\\inc\\enhancedinput\\uht\\inputactionvalue.generated.h",
             "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\components\\boxcomponent.h",

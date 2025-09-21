@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SpaceShootModuleRules")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Development")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+87c3b4209339a47fcc642c2649e94257aabc6c09")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8637a7e6320e7cb9eda08a512a0d6ac71d85c6c0")]
 [assembly: System.Reflection.AssemblyProductAttribute("SpaceShootModuleRules")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SpaceShootModuleRules")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

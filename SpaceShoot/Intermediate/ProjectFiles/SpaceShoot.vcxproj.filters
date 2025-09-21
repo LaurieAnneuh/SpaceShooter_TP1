@@ -33,12 +33,6 @@
     <Filter Include="Source\SpaceShoot">
       <UniqueIdentifier>{5F346614-DBD1-33DD-9B87-817C81D32CCC}</UniqueIdentifier>
     </Filter>
-    <ClCompile Include="..\..\Source\SpaceShoot\SpaceShip.cpp">
-      <Filter>Source\SpaceShoot</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\SpaceShoot\SpaceShip.h">
-      <Filter>Source\SpaceShoot</Filter>
-    </ClCompile>
     <None Include="..\..\Source\SpaceShoot\SpaceShoot.Build.cs">
       <Filter>Source\SpaceShoot</Filter>
     </None>
@@ -59,6 +53,48 @@
     </ClCompile>
     <ClCompile Include="..\..\Source\SpaceShoot\SpaceShootGameMode.h">
       <Filter>Source\SpaceShoot</Filter>
+    </ClCompile>
+    <Filter Include="Source\SpaceShoot\Private">
+      <UniqueIdentifier>{3DD494E7-9D80-3005-B4B7-3775F58D07B7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\SpaceShoot\Private\Managers">
+      <UniqueIdentifier>{3450390A-9B02-311D-9329-4694E1947EBE}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\SpaceShoot\Private\Managers\AsteroidManager.cpp">
+      <Filter>Source\SpaceShoot\Private\Managers</Filter>
+    </ClCompile>
+    <Filter Include="Source\SpaceShoot\Private\Object">
+      <UniqueIdentifier>{024DF6A0-E368-3DAF-968F-6961D7E77A67}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\SpaceShoot\Private\Object\Asteroid.cpp">
+      <Filter>Source\SpaceShoot\Private\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SpaceShoot\Private\Object\Laser.cpp">
+      <Filter>Source\SpaceShoot\Private\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SpaceShoot\Private\Object\SpaceShip.cpp">
+      <Filter>Source\SpaceShoot\Private\Object</Filter>
+    </ClCompile>
+    <Filter Include="Source\SpaceShoot\Public">
+      <UniqueIdentifier>{34DDF548-1DCA-37D4-AE4B-3D96783B4201}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\SpaceShoot\Public\Managers">
+      <UniqueIdentifier>{823D61B6-C427-3F29-8565-EA58BDB6DCF7}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\SpaceShoot\Public\Managers\AsteroidManager.h">
+      <Filter>Source\SpaceShoot\Public\Managers</Filter>
+    </ClCompile>
+    <Filter Include="Source\SpaceShoot\Public\Object">
+      <UniqueIdentifier>{BF522465-3640-3FAF-81BF-4A81973D517C}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\SpaceShoot\Public\Object\Asteroid.h">
+      <Filter>Source\SpaceShoot\Public\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SpaceShoot\Public\Object\Laser.h">
+      <Filter>Source\SpaceShoot\Public\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SpaceShoot\Public\Object\SpaceShip.h">
+      <Filter>Source\SpaceShoot\Public\Object</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
