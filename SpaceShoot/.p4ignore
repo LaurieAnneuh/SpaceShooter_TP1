@@ -1,0 +1,58 @@
+# ----------------------------
+# Unreal Engine Ignored Files
+# ----------------------------
+
+# Binaries and intermediates (compiled code and temporary files)
+Binaries/
+Build/
+DerivedDataCache/
+Intermediate/
+Saved/
+*.VC.db
+*.VC.VC.opendb
+*.sdf
+*.opensdf
+*.log
+*.tlog
+*.ipch
+
+# User-specific project files
+*.suo
+*.user
+*.userprefs
+*.db
+*.sln.docstates
+*.orig
+
+# Mac-specific files
+.DS_Store
+
+# Linux-specific files
+*.swp
+*~
+.cache/
+
+# Build output
+*.pdb
+*.obj
+*.exe
+*.dll
+*.lib
+*.app
+*.dylib
+*.so
+
+# Unreal-specific cache
+.vscode/
+.vs/
+.idea
+*.xcodeproj/
+*.xcworkspace/
+*.xcuserstate
+
+# Ignore crash reports
+*.dmp
+
+# Optional: Ignore local config if you don't want user-specific settings
+# (You may choose to keep Config/Default* but ignore Config/Windows/* etc.)
+Config/Window

@@ -11,6 +11,8 @@
     <None Include="..\..\Source\SpaceShootEditor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\.gitignore" />
+    <None Include="..\..\.p4ignore" />
     <None Include="..\..\.vsconfig" />
     <Filter Include="Config">
       <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
@@ -60,6 +62,9 @@
     <Filter Include="Source\SpaceShoot\Private\Managers">
       <UniqueIdentifier>{3450390A-9B02-311D-9329-4694E1947EBE}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\SpaceShoot\Private\Managers\AsteroidLifeWidget.cpp">
+      <Filter>Source\SpaceShoot\Private\Managers</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\SpaceShoot\Private\Managers\AsteroidManager.cpp">
       <Filter>Source\SpaceShoot\Private\Managers</Filter>
     </ClCompile>
@@ -81,6 +86,9 @@
     <Filter Include="Source\SpaceShoot\Public\Managers">
       <UniqueIdentifier>{823D61B6-C427-3F29-8565-EA58BDB6DCF7}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\SpaceShoot\Public\Managers\AsteroidLifeWidget.h">
+      <Filter>Source\SpaceShoot\Public\Managers</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\SpaceShoot\Public\Managers\AsteroidManager.h">
       <Filter>Source\SpaceShoot\Public\Managers</Filter>
     </ClCompile>
