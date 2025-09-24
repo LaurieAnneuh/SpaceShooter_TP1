@@ -6,7 +6,35 @@
 			"description": "Default Uncontrolled Changelist",
 			"files": [
 				"C:/Users/laula/Documents/GitHub/SpaceShooter_TP1/SpaceShoot/Content/StarterContent/Architecture/Floor_400x400.uasset",
-				"C:/Users/laula/Documents/GitHub/SpaceShooter_TP1/SpaceShoot/Content/Maps/MainMap.umap"
+				"C:/Users/laula/Documents/GitHub/SpaceShooter_TP1/SpaceShoot/Content/Maps/MainMap.umap",
+				"C:/Users/laula/Documents/GitHub/SpaceShooter_TP1/SpaceShoot/Content/Blueprint/BP_SpaceShip.uasset",
+				"C:/Users/laula/Documents/GitHub/SpaceShooter_TP1/SpaceShoot/Content/ThirdPerson/Input/IMC_Default.uasset",
+				"C:/Users/laula/Documents/GitHub/SpaceShooter_TP1/SpaceShoot/Content/ThirdPerson/Input/Actions/IA_Rotate.uasset",
+				"C:/Users/laula/Documents/GitHub/SpaceShooter_TP1/SpaceShoot/Content/ThirdPerson/Input/Actions/IA_Shoot.uasset",
+				"C:/Users/laula/Documents/GitHub/SpaceShooter_TP1/SpaceShoot/Content/Blueprint/BP_Laser.uasset",
+				"C:/Users/laula/Documents/GitHub/SpaceShooter_TP1/SpaceShoot/Content/Blueprint/BP_AsteroidManager.uasset",
+				"C:/Users/laula/Documents/GitHub/SpaceShooter_TP1/SpaceShoot/Content/Blueprint/BP_Asteroid.uasset",
+				"C:/Users/laula/Documents/GitHub/SpaceShooter_TP1/SpaceShoot/Content/UI/UI_Life.uasset",
+				"C:/Users/laula/Documents/GitHub/SpaceShooter_TP1/SpaceShoot/Content/UI/UI_Score.uasset",
+				"C:/Users/laula/Documents/GitHub/SpaceShooter_TP1/SpaceShoot/Content/Texture/IMG_0978.uasset",
+				"C:/Users/laula/Documents/GitHub/SpaceShooter_TP1/SpaceShoot/Content/UI/UI_Menu.uasset",
+				"C:/Users/laula/Documents/GitHub/SpaceShooter_TP1/SpaceShoot/Content/Texture/Space.uasset",
+				"C:/Users/laula/Documents/GitHub/SpaceShooter_TP1/SpaceShoot/Content/Maps/MenuPage.umap",
+				"C:/Users/laula/Documents/GitHub/SpaceShooter_TP1/SpaceShoot/Content/Menu_empty.uasset",
+				"C:/Users/laula/Documents/GitHub/SpaceShooter_TP1/SpaceShoot/Content/UI/UI_GameOver.uasset",
+				"C:/Users/laula/Documents/GitHub/SpaceShooter_TP1/SpaceShoot/Content/Texture/life-heart.uasset",
+				"C:/Users/laula/Documents/GitHub/SpaceShooter_TP1/SpaceShoot/Content/Blueprint/MySpaceShootGameMode.uasset",
+				"C:/Users/laula/Documents/GitHub/SpaceShooter_TP1/SpaceShoot/Content/Texture/AsteroidGris.uasset",
+				"C:/Users/laula/Documents/GitHub/SpaceShooter_TP1/SpaceShoot/Content/Texture/asteroidMauve.uasset",
+				"C:/Users/laula/Documents/GitHub/SpaceShooter_TP1/SpaceShoot/Content/Texture/destroyedAsteroid.uasset",
+				"C:/Users/laula/Documents/GitHub/SpaceShooter_TP1/SpaceShoot/Content/Texture/sky_2.uasset",
+				"C:/Users/laula/Documents/GitHub/SpaceShooter_TP1/SpaceShoot/Content/Texture/Spaceship.uasset",
+				"C:/Users/laula/Documents/GitHub/SpaceShooter_TP1/SpaceShoot/Content/Texture/AsteroidGris_Sprite.uasset",
+				"C:/Users/laula/Documents/GitHub/SpaceShooter_TP1/SpaceShoot/Content/Texture/destroyedAsteroid_Sprite.uasset",
+				"C:/Users/laula/Documents/GitHub/SpaceShooter_TP1/SpaceShoot/Content/Texture/sky_2_Mat.uasset",
+				"C:/Users/laula/Documents/GitHub/SpaceShooter_TP1/SpaceShoot/Content/Texture/Spaceship_Sprite.uasset",
+				"C:/Users/laula/Documents/GitHub/SpaceShooter_TP1/SpaceShoot/Content/UI/UI_ScoreLife.uasset",
+				"C:/Users/laula/Documents/GitHub/SpaceShooter_TP1/SpaceShoot/Content/Texture/Illustration_sans_titre.uasset"
 			]
 		}
 	]

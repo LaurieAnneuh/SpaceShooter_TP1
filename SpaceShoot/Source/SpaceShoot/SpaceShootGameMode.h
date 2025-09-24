@@ -13,6 +13,13 @@ class ASpaceShootGameMode : public AGameModeBase
 
 public:
 	ASpaceShootGameMode();
+	UPROPERTY(EditAnywhere, Category = "UI")
+	TSubclassOf<UUserWidget> GameOverWidgetClass;
+	UPROPERTY(EditAnywhere)
+	UUserWidget* GameOverWidget;
+
+	UFUNCTION(BlueprintCallable)
+	void GameOver();
 };
 
 
