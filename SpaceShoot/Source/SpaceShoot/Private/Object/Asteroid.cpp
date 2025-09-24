@@ -86,12 +86,12 @@ void AAsteroid::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* Othe
 			BoxCollision->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 			SetActorTickEnabled(false);
 			
-			GetWorldTimerManager().SetTimer(DestroyTimerHandle, this, &AAsteroid::DestroyAsteroid, 1.0f, false);
+			GetWorldTimerManager().SetTimer(DestroyTimerHandle, this, &AAsteroid::DestroyAsteroidFinal, 1.0f, false);
 		}
 	}
 }
 
-void AAsteroid::DestroyAsteroid()
+void AAsteroid::DestroyAsteroidFinal()
 {
 	Destroy();
 }
