@@ -17,8 +17,8 @@ AAsteroid::AAsteroid()
 	BoxCollision->SetGenerateOverlapEvents(true);
 	BoxCollision->SetCollisionProfileName(TEXT("OverlapAllDynamic"));
 	
-	StaticMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("StaticMesh"));
-	StaticMesh->SetupAttachment(BoxCollision);
+	Sprite = CreateDefaultSubobject<UPaperSpriteComponent>(TEXT("Sprite"));
+	Sprite->SetupAttachment(BoxCollision);
 	MovementSpeed = 200.f;
 	size = 0;
 }
@@ -33,9 +33,9 @@ void AAsteroid::BeginPlay()
 		MovementDirection = FMath::VRand().GetSafeNormal();
 	}
 	size = FMath::RandRange(1, 3);
-	float ScaleFactor = 0.3f * (size + 1);
+	float ScaleFactor = 0.2f * (size);
 	life = size;
-	StaticMesh->SetWorldScale3D(FVector(ScaleFactor));
+	Sprite->SetWorldScale3D(FVector(ScaleFactor));
 	BoxCollision->SetWorldScale3D(FVector(ScaleFactor));
 }
 
@@ -78,7 +78,20 @@ void AAsteroid::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* Othe
 				Manager->AddScore(100*size);
 			}
 			OtherActor->Destroy();
-			Destroy();
+			if (DestroyedSprite)
+			{
+				Sprite->SetSprite(DestroyedSprite);
+			}
+			
+			BoxCollision->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+			SetActorTickEnabled(false);
+			
+			GetWorldTimerManager().SetTimer(DestroyTimerHandle, this, &AAsteroid::DestroyAsteroid, 1.0f, false);
 		}
 	}
+}
+
+void AAsteroid::DestroyAsteroid()
+{
+	Destroy();
 }

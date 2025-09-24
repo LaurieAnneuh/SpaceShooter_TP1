@@ -17,10 +17,10 @@ ENGINE_API UClass* Z_Construct_UClass_APawn();
 ENGINE_API UClass* Z_Construct_UClass_UBoxComponent_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UPawnMovementComponent_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UPrimitiveComponent_NoRegister();
-ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FHitResult();
 ENHANCEDINPUT_API UClass* Z_Construct_UClass_UInputAction_NoRegister();
 ENHANCEDINPUT_API UClass* Z_Construct_UClass_UInputMappingContext_NoRegister();
+PAPER2D_API UClass* Z_Construct_UClass_UPaperSpriteComponent_NoRegister();
 SPACESHOOT_API UClass* Z_Construct_UClass_ALaser_NoRegister();
 SPACESHOOT_API UClass* Z_Construct_UClass_ASpaceShip();
 SPACESHOOT_API UClass* Z_Construct_UClass_ASpaceShip_NoRegister();
@@ -138,7 +138,7 @@ struct Z_Construct_UClass_ASpaceShip_Statics
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Public/Object/SpaceShip.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_StaticMesh_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Sprite_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "SpaceShip" },
 		{ "EditInline", "true" },
@@ -179,7 +179,7 @@ struct Z_Construct_UClass_ASpaceShip_Statics
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_BoxCollision;
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_StaticMesh;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_Sprite;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_MovementComponent;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_InputMappingContext;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_MoveAction;
@@ -200,7 +200,7 @@ struct Z_Construct_UClass_ASpaceShip_Statics
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASpaceShip_Statics::NewProp_BoxCollision = { "BoxCollision", nullptr, (EPropertyFlags)0x00100000000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ASpaceShip, BoxCollision), Z_Construct_UClass_UBoxComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_BoxCollision_MetaData), NewProp_BoxCollision_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASpaceShip_Statics::NewProp_StaticMesh = { "StaticMesh", nullptr, (EPropertyFlags)0x00100000000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ASpaceShip, StaticMesh), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_StaticMesh_MetaData), NewProp_StaticMesh_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASpaceShip_Statics::NewProp_Sprite = { "Sprite", nullptr, (EPropertyFlags)0x00100000000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ASpaceShip, Sprite), Z_Construct_UClass_UPaperSpriteComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Sprite_MetaData), NewProp_Sprite_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASpaceShip_Statics::NewProp_MovementComponent = { "MovementComponent", nullptr, (EPropertyFlags)0x00100000000a000d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ASpaceShip, MovementComponent), Z_Construct_UClass_UPawnMovementComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MovementComponent_MetaData), NewProp_MovementComponent_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASpaceShip_Statics::NewProp_InputMappingContext = { "InputMappingContext", nullptr, (EPropertyFlags)0x0010000000010001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ASpaceShip, InputMappingContext), Z_Construct_UClass_UInputMappingContext_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_InputMappingContext_MetaData), NewProp_InputMappingContext_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASpaceShip_Statics::NewProp_MoveAction = { "MoveAction", nullptr, (EPropertyFlags)0x0010000000010001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ASpaceShip, MoveAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MoveAction_MetaData), NewProp_MoveAction_MetaData) };
@@ -211,7 +211,7 @@ const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_ASpaceShip_Stat
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASpaceShip_Statics::NewProp_SpaceshipHUD = { "SpaceshipHUD", nullptr, (EPropertyFlags)0x0010000000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ASpaceShip, SpaceshipHUD), Z_Construct_UClass_UUserWidget_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SpaceshipHUD_MetaData), NewProp_SpaceshipHUD_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ASpaceShip_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASpaceShip_Statics::NewProp_BoxCollision,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASpaceShip_Statics::NewProp_StaticMesh,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASpaceShip_Statics::NewProp_Sprite,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASpaceShip_Statics::NewProp_MovementComponent,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASpaceShip_Statics::NewProp_InputMappingContext,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASpaceShip_Statics::NewProp_MoveAction,
@@ -262,10 +262,10 @@ ASpaceShip::~ASpaceShip() {}
 struct Z_CompiledInDeferFile_FID_Users_laula_Documents_GitHub_SpaceShooter_TP1_SpaceShoot_Source_SpaceShoot_Public_Object_SpaceShip_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ASpaceShip, ASpaceShip::StaticClass, TEXT("ASpaceShip"), &Z_Registration_Info_UClass_ASpaceShip, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASpaceShip), 2290898874U) },
+		{ Z_Construct_UClass_ASpaceShip, ASpaceShip::StaticClass, TEXT("ASpaceShip"), &Z_Registration_Info_UClass_ASpaceShip, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASpaceShip), 3888626804U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_laula_Documents_GitHub_SpaceShooter_TP1_SpaceShoot_Source_SpaceShoot_Public_Object_SpaceShip_h_210963703(TEXT("/Script/SpaceShoot"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_laula_Documents_GitHub_SpaceShooter_TP1_SpaceShoot_Source_SpaceShoot_Public_Object_SpaceShip_h_1886129734(TEXT("/Script/SpaceShoot"),
 	Z_CompiledInDeferFile_FID_Users_laula_Documents_GitHub_SpaceShooter_TP1_SpaceShoot_Source_SpaceShoot_Public_Object_SpaceShip_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_laula_Documents_GitHub_SpaceShooter_TP1_SpaceShoot_Source_SpaceShoot_Public_Object_SpaceShip_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

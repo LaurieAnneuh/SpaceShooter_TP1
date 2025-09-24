@@ -15,12 +15,42 @@ ENGINE_API UClass* Z_Construct_UClass_AActor();
 ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UBoxComponent_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UPrimitiveComponent_NoRegister();
-ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FHitResult();
+PAPER2D_API UClass* Z_Construct_UClass_UPaperSprite_NoRegister();
+PAPER2D_API UClass* Z_Construct_UClass_UPaperSpriteComponent_NoRegister();
 SPACESHOOT_API UClass* Z_Construct_UClass_AAsteroid();
 SPACESHOOT_API UClass* Z_Construct_UClass_AAsteroid_NoRegister();
 UPackage* Z_Construct_UPackage__Script_SpaceShoot();
 // End Cross Module References
+
+// Begin Class AAsteroid Function DestroyAsteroid
+struct Z_Construct_UFunction_AAsteroid_DestroyAsteroid_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/Object/Asteroid.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AAsteroid_DestroyAsteroid_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AAsteroid, nullptr, "DestroyAsteroid", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AAsteroid_DestroyAsteroid_Statics::Function_MetaDataParams), Z_Construct_UFunction_AAsteroid_DestroyAsteroid_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_AAsteroid_DestroyAsteroid()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AAsteroid_DestroyAsteroid_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(AAsteroid::execDestroyAsteroid)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->DestroyAsteroid();
+	P_NATIVE_END;
+}
+// End Class AAsteroid Function DestroyAsteroid
 
 // Begin Class AAsteroid Function OnOverlapBegin
 struct Z_Construct_UFunction_AAsteroid_OnOverlapBegin_Statics
@@ -108,6 +138,7 @@ void AAsteroid::StaticRegisterNativesAAsteroid()
 {
 	UClass* Class = AAsteroid::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
+		{ "DestroyAsteroid", &AAsteroid::execDestroyAsteroid },
 		{ "OnOverlapBegin", &AAsteroid::execOnOverlapBegin },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
@@ -129,10 +160,14 @@ struct Z_Construct_UClass_AAsteroid_Statics
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Public/Object/Asteroid.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_StaticMesh_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Sprite_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Asteroid" },
 		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Public/Object/Asteroid.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_DestroyedSprite_MetaData[] = {
+		{ "Category", "Sprite" },
 		{ "ModuleRelativePath", "Public/Object/Asteroid.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_size_MetaData[] = {
@@ -141,11 +176,13 @@ struct Z_Construct_UClass_AAsteroid_Statics
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_BoxCollision;
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_StaticMesh;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_Sprite;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_DestroyedSprite;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_size;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
+		{ &Z_Construct_UFunction_AAsteroid_DestroyAsteroid, "DestroyAsteroid" }, // 322239345
 		{ &Z_Construct_UFunction_AAsteroid_OnOverlapBegin, "OnOverlapBegin" }, // 833004120
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
@@ -155,11 +192,13 @@ struct Z_Construct_UClass_AAsteroid_Statics
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AAsteroid_Statics::NewProp_BoxCollision = { "BoxCollision", nullptr, (EPropertyFlags)0x00100000000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AAsteroid, BoxCollision), Z_Construct_UClass_UBoxComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_BoxCollision_MetaData), NewProp_BoxCollision_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AAsteroid_Statics::NewProp_StaticMesh = { "StaticMesh", nullptr, (EPropertyFlags)0x00100000000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AAsteroid, StaticMesh), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_StaticMesh_MetaData), NewProp_StaticMesh_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AAsteroid_Statics::NewProp_Sprite = { "Sprite", nullptr, (EPropertyFlags)0x00100000000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AAsteroid, Sprite), Z_Construct_UClass_UPaperSpriteComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Sprite_MetaData), NewProp_Sprite_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AAsteroid_Statics::NewProp_DestroyedSprite = { "DestroyedSprite", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AAsteroid, DestroyedSprite), Z_Construct_UClass_UPaperSprite_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DestroyedSprite_MetaData), NewProp_DestroyedSprite_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AAsteroid_Statics::NewProp_size = { "size", nullptr, (EPropertyFlags)0x0010000000020001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AAsteroid, size), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_size_MetaData), NewProp_size_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AAsteroid_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAsteroid_Statics::NewProp_BoxCollision,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAsteroid_Statics::NewProp_StaticMesh,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAsteroid_Statics::NewProp_Sprite,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAsteroid_Statics::NewProp_DestroyedSprite,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAsteroid_Statics::NewProp_size,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AAsteroid_Statics::PropPointers) < 2048);
@@ -203,10 +242,10 @@ AAsteroid::~AAsteroid() {}
 struct Z_CompiledInDeferFile_FID_Users_laula_Documents_GitHub_SpaceShooter_TP1_SpaceShoot_Source_SpaceShoot_Public_Object_Asteroid_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AAsteroid, AAsteroid::StaticClass, TEXT("AAsteroid"), &Z_Registration_Info_UClass_AAsteroid, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AAsteroid), 3809436948U) },
+		{ Z_Construct_UClass_AAsteroid, AAsteroid::StaticClass, TEXT("AAsteroid"), &Z_Registration_Info_UClass_AAsteroid, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AAsteroid), 3045437966U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_laula_Documents_GitHub_SpaceShooter_TP1_SpaceShoot_Source_SpaceShoot_Public_Object_Asteroid_h_127623318(TEXT("/Script/SpaceShoot"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_laula_Documents_GitHub_SpaceShooter_TP1_SpaceShoot_Source_SpaceShoot_Public_Object_Asteroid_h_2225598095(TEXT("/Script/SpaceShoot"),
 	Z_CompiledInDeferFile_FID_Users_laula_Documents_GitHub_SpaceShooter_TP1_SpaceShoot_Source_SpaceShoot_Public_Object_Asteroid_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_laula_Documents_GitHub_SpaceShooter_TP1_SpaceShoot_Source_SpaceShoot_Public_Object_Asteroid_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

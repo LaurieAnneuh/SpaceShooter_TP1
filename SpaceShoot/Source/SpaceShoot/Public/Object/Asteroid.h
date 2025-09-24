@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "Components/BoxComponent.h"
+#include "PaperSpriteComponent.h"
 #include "Asteroid.generated.h"
 
 UCLASS()
@@ -15,13 +16,16 @@ class SPACESHOOT_API AAsteroid : public AActor
 public:	
 	// Sets default values for this actor's properties
 	AAsteroid();
-
+	FTimerHandle DestroyTimerHandle;
+	
 	UPROPERTY(VisibleAnywhere)
 	UBoxComponent* BoxCollision;
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, meta = (AllowPrivateAccess="true"))
-	UStaticMeshComponent* StaticMesh;
-
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, meta = (AllowPrivateAccess = "true"))
+	UPaperSpriteComponent* Sprite;
+	UPROPERTY(EditAnywhere, Category = "Sprite")
+	UPaperSprite* DestroyedSprite;
+	
 	UPROPERTY(VisibleAnywhere)
 	float size;
 
@@ -46,4 +50,7 @@ public:
 		bool bFromSweep,
 		const FHitResult& SweepResult
 	);
+	
+	UFUNCTION()
+	void DestroyAsteroid();
 };

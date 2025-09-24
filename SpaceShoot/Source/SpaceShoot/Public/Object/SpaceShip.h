@@ -1,11 +1,11 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #pragma once
-
 #include "CoreMinimal.h"
 #include "GameFramework/Pawn.h"
 #include "InputActionValue.h"
 #include "Components/BoxComponent.h"
+#include "PaperSpriteComponent.h"
 #include "SpaceShip.generated.h"
 
 class UInputMappingContext;
@@ -23,8 +23,8 @@ public:
 	UPROPERTY(VisibleAnywhere)
 	UBoxComponent* BoxCollision;
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, meta = (AllowPrivateAccess="true"))
-	UStaticMeshComponent* StaticMesh;
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, meta = (AllowPrivateAccess = "true"))
+	UPaperSpriteComponent* Sprite;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category=Pawn)
 	UPawnMovementComponent* MovementComponent;

@@ -28,8 +28,8 @@ ASpaceShip::ASpaceShip()
 	BoxCollision->SetGenerateOverlapEvents(true);
 	BoxCollision->SetCollisionProfileName(TEXT("OverlapAllDynamic"));
 	
-	StaticMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("StaticMesh"));
-	StaticMesh->SetupAttachment(BoxCollision);
+	Sprite = CreateDefaultSubobject<UPaperSpriteComponent>(TEXT("Sprite"));
+	Sprite->SetupAttachment(BoxCollision);
 	MovementComponent = CreateDefaultSubobject<UFloatingPawnMovement>(TEXT("MovementComponent"));
 
 }
