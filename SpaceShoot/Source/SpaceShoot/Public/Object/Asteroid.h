@@ -52,5 +52,5 @@ public:
 	);
 	
 	UFUNCTION()
-	void DestroyAsteroidFinal();
+	void FinshDestroyAsteroid();
 };
