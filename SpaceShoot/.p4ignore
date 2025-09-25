@@ -4,7 +4,6 @@
 
 # Binaries and intermediates (compiled code and temporary files)
 Binaries/
-Build/
 DerivedDataCache/
 Intermediate/
 Saved/
@@ -32,15 +31,6 @@ Saved/
 *~
 .cache/
 
-# Build output
-*.pdb
-*.obj
-*.exe
-*.dll
-*.lib
-*.app
-*.dylib
-*.so
 
 # Unreal-specific cache
 .vscode/
