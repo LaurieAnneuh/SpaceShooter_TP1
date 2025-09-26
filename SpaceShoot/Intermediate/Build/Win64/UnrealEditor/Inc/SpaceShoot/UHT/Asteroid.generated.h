@@ -18,7 +18,7 @@ struct FHitResult;
 #define SPACESHOOT_Asteroid_generated_h
 
 #define FID_Users_laula_Documents_GitHub_SpaceShooter_TP1_SpaceShoot_Source_SpaceShoot_Public_Object_Asteroid_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
-	DECLARE_FUNCTION(execDestroyAsteroid); \
+	DECLARE_FUNCTION(execFinshDestroyAsteroid); \
 	DECLARE_FUNCTION(execOnOverlapBegin);
 
 

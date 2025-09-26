@@ -63,6 +63,7 @@ void ASpaceShip::BeginPlay()
 void ASpaceShip::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+	
 	FVector Location = GetActorLocation();
 
 	Location.X = FMath::Clamp(Location.X, -1100.f, 500.f);
@@ -120,12 +121,12 @@ void ASpaceShip::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* Oth
 		{
 			life--;
 			OtherActor->Destroy();
+			FlashRed();
 		}
 		if (SpaceshipHUD)
         {
 			if (life == 2)
 			{
-				GEngine->AddOnScreenDebugMessage(-1, 0.5f, FColor::Green, FString::FromInt(life));
 				UImage* BonusImg = Cast<UImage>(SpaceshipHUD->GetWidgetFromName("first_life"));
 				if (BonusImg)
 				{
@@ -134,7 +135,6 @@ void ASpaceShip::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* Oth
 			}
 			else if (life == 1)
 			{
-				GEngine->AddOnScreenDebugMessage(-1, 0.5f, FColor::Green, FString::FromInt(life));
 				UImage* BonusImg = Cast<UImage>(SpaceshipHUD->GetWidgetFromName("second_life"));
 				if (BonusImg)
 				{
@@ -154,4 +154,18 @@ void ASpaceShip::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* Oth
 			Destroy();
 		}
 	}
+}
+
+void ASpaceShip::FlashRed()
+{
+	OriginalColor = Sprite->GetSpriteColor();
+
+	Sprite->SetSpriteColor(FLinearColor(1.0f, 0.0f, 0.0f, 0.5f));
+
+	GetWorld()->GetTimerManager().SetTimer(FlashTimerHandle, this, &ASpaceShip::ResetSpriteColor, 0.5f, false);
+}
+
+void ASpaceShip::ResetSpriteColor()
+{
+	Sprite->SetSpriteColor(OriginalColor);
 }

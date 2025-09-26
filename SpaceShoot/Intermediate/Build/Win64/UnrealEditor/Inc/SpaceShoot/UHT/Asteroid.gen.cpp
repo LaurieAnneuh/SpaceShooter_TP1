@@ -23,8 +23,8 @@ SPACESHOOT_API UClass* Z_Construct_UClass_AAsteroid_NoRegister();
 UPackage* Z_Construct_UPackage__Script_SpaceShoot();
 // End Cross Module References
 
-// Begin Class AAsteroid Function DestroyAsteroid
-struct Z_Construct_UFunction_AAsteroid_DestroyAsteroid_Statics
+// Begin Class AAsteroid Function FinshDestroyAsteroid
+struct Z_Construct_UFunction_AAsteroid_FinshDestroyAsteroid_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
@@ -33,24 +33,24 @@ struct Z_Construct_UFunction_AAsteroid_DestroyAsteroid_Statics
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AAsteroid_DestroyAsteroid_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AAsteroid, nullptr, "DestroyAsteroid", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AAsteroid_DestroyAsteroid_Statics::Function_MetaDataParams), Z_Construct_UFunction_AAsteroid_DestroyAsteroid_Statics::Function_MetaDataParams) };
-UFunction* Z_Construct_UFunction_AAsteroid_DestroyAsteroid()
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AAsteroid_FinshDestroyAsteroid_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AAsteroid, nullptr, "FinshDestroyAsteroid", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AAsteroid_FinshDestroyAsteroid_Statics::Function_MetaDataParams), Z_Construct_UFunction_AAsteroid_FinshDestroyAsteroid_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_AAsteroid_FinshDestroyAsteroid()
 {
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AAsteroid_DestroyAsteroid_Statics::FuncParams);
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AAsteroid_FinshDestroyAsteroid_Statics::FuncParams);
 	}
 	return ReturnFunction;
 }
-DEFINE_FUNCTION(AAsteroid::execDestroyAsteroid)
+DEFINE_FUNCTION(AAsteroid::execFinshDestroyAsteroid)
 {
 	P_FINISH;
 	P_NATIVE_BEGIN;
-	P_THIS->DestroyAsteroid();
+	P_THIS->FinshDestroyAsteroid();
 	P_NATIVE_END;
 }
-// End Class AAsteroid Function DestroyAsteroid
+// End Class AAsteroid Function FinshDestroyAsteroid
 
 // Begin Class AAsteroid Function OnOverlapBegin
 struct Z_Construct_UFunction_AAsteroid_OnOverlapBegin_Statics
@@ -138,7 +138,7 @@ void AAsteroid::StaticRegisterNativesAAsteroid()
 {
 	UClass* Class = AAsteroid::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
-		{ "DestroyAsteroid", &AAsteroid::execDestroyAsteroid },
+		{ "FinshDestroyAsteroid", &AAsteroid::execFinshDestroyAsteroid },
 		{ "OnOverlapBegin", &AAsteroid::execOnOverlapBegin },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
@@ -182,7 +182,7 @@ struct Z_Construct_UClass_AAsteroid_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_AAsteroid_DestroyAsteroid, "DestroyAsteroid" }, // 322239345
+		{ &Z_Construct_UFunction_AAsteroid_FinshDestroyAsteroid, "FinshDestroyAsteroid" }, // 179340906
 		{ &Z_Construct_UFunction_AAsteroid_OnOverlapBegin, "OnOverlapBegin" }, // 833004120
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
@@ -242,10 +242,10 @@ AAsteroid::~AAsteroid() {}
 struct Z_CompiledInDeferFile_FID_Users_laula_Documents_GitHub_SpaceShooter_TP1_SpaceShoot_Source_SpaceShoot_Public_Object_Asteroid_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AAsteroid, AAsteroid::StaticClass, TEXT("AAsteroid"), &Z_Registration_Info_UClass_AAsteroid, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AAsteroid), 3045437966U) },
+		{ Z_Construct_UClass_AAsteroid, AAsteroid::StaticClass, TEXT("AAsteroid"), &Z_Registration_Info_UClass_AAsteroid, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AAsteroid), 800212177U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_laula_Documents_GitHub_SpaceShooter_TP1_SpaceShoot_Source_SpaceShoot_Public_Object_Asteroid_h_2225598095(TEXT("/Script/SpaceShoot"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_laula_Documents_GitHub_SpaceShooter_TP1_SpaceShoot_Source_SpaceShoot_Public_Object_Asteroid_h_3812496827(TEXT("/Script/SpaceShoot"),
 	Z_CompiledInDeferFile_FID_Users_laula_Documents_GitHub_SpaceShooter_TP1_SpaceShoot_Source_SpaceShoot_Public_Object_Asteroid_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_laula_Documents_GitHub_SpaceShooter_TP1_SpaceShoot_Source_SpaceShoot_Public_Object_Asteroid_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

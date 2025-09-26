@@ -33,9 +33,8 @@ void AAsteroid::BeginPlay()
 		MovementDirection = FMath::VRand().GetSafeNormal();
 	}
 	size = FMath::RandRange(1, 3);
-	float ScaleFactor = 0.2f * (size);
+	float ScaleFactor = 0.5f * (size);
 	life = size;
-	Sprite->SetWorldScale3D(FVector(ScaleFactor));
 	BoxCollision->SetWorldScale3D(FVector(ScaleFactor));
 }
 
@@ -68,6 +67,7 @@ void AAsteroid::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* Othe
 		if (life > 0)
 		{
 			life--;
+			OtherActor->Destroy();
 		}
 		if (life == 0)
 		{
@@ -81,9 +81,9 @@ void AAsteroid::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* Othe
 			if (DestroyedSprite)
 			{
 				Sprite->SetSprite(DestroyedSprite);
+				BoxCollision->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 			}
 			
-			BoxCollision->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 			SetActorTickEnabled(false);
 			
 			GetWorldTimerManager().SetTimer(DestroyTimerHandle, this, &AAsteroid::DestroyAsteroid, 1.0f, false);

@@ -19,6 +19,8 @@ class SPACESHOOT_API ASpaceShip : public APawn
 public:
 	// Sets default values for this pawn's properties
 	ASpaceShip();
+	FTimerHandle FlashTimerHandle;
+	FLinearColor OriginalColor;
 	
 	UPROPERTY(VisibleAnywhere)
 	UBoxComponent* BoxCollision;
@@ -76,4 +78,6 @@ public:
 		bool bFromSweep,
 		const FHitResult& SweepResult
 	);
+	void FlashRed();
+	void ResetSpriteColor();
 };
